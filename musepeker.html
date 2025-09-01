@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musepeker</title>
+<style>
+    body, html { height: 100%; width:100; }
+    body { background-color: black; cursor: none; }
+    div {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: red;
+        position:absolute;
+        top:0px;
+        left:0px;
+    }
+</style>
+</head>
+<body>
+
+    
+
+    <div></div>
+
+    <script>
+    var bodyEl =document.querySelector("body")
+    var sirkelel=document.querySelector("div")
+    bodyEl.addEventListener("mousemove", flyttsirkel);
+    
+    function flyttsirkel(e) {
+        sirkelel.style.left = (e.clientX - 25) + "px";
+        sirkelel.style.top = e.clientY + "px";
+
+        console.log(e.clientX);
+        console.log(e.clientY);
+
+                
+     }
+    
+    </script>
+
+</body>
+</html>
